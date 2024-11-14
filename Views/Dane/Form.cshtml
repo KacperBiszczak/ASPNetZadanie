@@ -1,0 +1,48 @@
+﻿@model ASPNetZadanie.Models.Dane;
+
+<form asp-action="Form" method="post">
+    <div asp-validation-summary="All"></div>
+    <div>
+        <label asp-for="Imie">Imie</label>
+        <input asp-for="Imie" required/>
+    </div>
+    <div>
+        <label asp-for="Nazwisko">Nazwisko</label>
+        <input asp-for="Nazwisko" required />
+    </div>
+    <div>
+        <label asp-for="Email">Email</label>
+        <input asp-for="Email" required />
+    </div>
+    <div>
+        <label asp-for="Haslo">Haslo</label>
+        <input asp-for="Haslo" required />
+    </div>
+    <div>
+        <label asp-for="PotwierdzenieHasla">PotwierdzenieHasla</label>
+        <input asp-for="PotwierdzenieHasla" required />
+    </div>
+    <div>
+        <label asp-for="NrTelefonu">NrTelefonu</label>
+        <input asp-for="NrTelefonu" />
+    </div>
+    <div>
+        <label asp-for="Wiek">Wiek</label>
+        <input asp-for="Wiek" />
+    </div>
+    <div>
+        <label asp-for="Miasto">Miasto</label>
+        <select asp-for="Miasto"
+            asp-items="Html.GetEnumSelectList<Dane.Miasta>()">
+        </select>
+    </div>
+
+    <div>
+        <input type="submit"/>
+    </div>
+    <div>
+        <input type="reset" />
+    </div>
+</form>
+
+
